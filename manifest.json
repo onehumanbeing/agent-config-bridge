@@ -1,0 +1,25 @@
+{
+  "manifest_version": "0.3",
+  "name": "agent-config-bridge",
+  "display_name": "Agent Config Bridge",
+  "version": "0.1.0",
+  "description": "Convert CLAUDE.md, AGENTS.md, Cursor rules, GEMINI.md and MCP configs between Claude Code, Codex CLI, Cursor and Gemini CLI.",
+  "author": { "name": "onehumanbeing", "url": "https://github.com/onehumanbeing" },
+  "homepage": "https://getaicodingagent.com",
+  "repository": { "type": "git", "url": "https://github.com/onehumanbeing/agent-config-bridge" },
+  "license": "MIT",
+  "keywords": ["claude-code", "codex", "cursor", "gemini-cli", "agents-md", "mcp"],
+  "server": {
+    "type": "node",
+    "entry_point": "dist/index.js",
+    "mcp_config": { "command": "node", "args": ["${__dirname}/dist/index.js"] }
+  },
+  "tools": [
+    { "name": "convert_rules", "description": "Convert instruction files between agents" },
+    { "name": "convert_mcp_config", "description": "Convert MCP server configs (JSON / Codex TOML / Gemini)" },
+    { "name": "detect_agent_configs", "description": "Scan a project for agent config files (read-only)" },
+    { "name": "migrate_project", "description": "Generate missing agent configs (dry run by default)" },
+    { "name": "compat_matrix", "description": "Verified config-path matrix with official doc links" }
+  ],
+  "compatibility": { "platforms": ["darwin", "win32", "linux"], "runtimes": { "node": ">=18.0.0" } }
+}

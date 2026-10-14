@@ -10,12 +10,12 @@
   "files": [
     "dist",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "manifest.json"
   ],
   "scripts": {
     "build": "tsc && mkdir -p dist/core && cp src/core/convert.cjs src/core/matrix.json dist/core/ && chmod +x dist/index.js",
-    "test": "npm run build && node test/unit.mjs && node test/smoke.mjs",
-    "prepublishOnly": "npm test"
+    "test": "npm run build && node test/unit.mjs && node test/smoke.mjs"
   },
   "keywords": [
     "mcp",

@@ -4,9 +4,19 @@
   "title": "Agent Config Bridge",
   "description": "Convert CLAUDE.md, AGENTS.md, Cursor rules, GEMINI.md and MCP configs between coding agents.",
   "websiteUrl": "https://getaicodingagent.com",
-  "repository": { "url": "https://github.com/onehumanbeing/agent-config-bridge", "source": "github" },
+  "repository": {
+    "url": "https://github.com/onehumanbeing/agent-config-bridge",
+    "source": "github"
+  },
   "version": "0.1.0",
   "packages": [
-    { "registryType": "npm", "identifier": "agent-config-bridge", "version": "0.1.0", "transport": { "type": "stdio" } }
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/onehumanbeing/agent-config-bridge/releases/download/v0.1.0/agent-config-bridge-0.1.0.mcpb",
+      "fileSha256": "438908e43759350b41596720f26f1308f831bc8ce5a38e414d3becb8d2e2c596",
+      "transport": {
+        "type": "stdio"
+      }
+    }
   ]
 }
