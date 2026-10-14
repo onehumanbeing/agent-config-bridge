@@ -20,7 +20,7 @@ Prefer a web UI? Use the same converter in your browser at **[getaicodingagent.c
 
 ## Install
 
-You need Node.js 18 or later. The package is not on npm. Run it straight from GitHub (`dist/` is committed, so there's no build step):
+You need Node.js 18 or later and npm 10 or later (npm 9.2 fails to run GitHub packages through npx). The package is not on npm. Run it straight from GitHub (`dist/` is committed, so there's no build step):
 
 ```bash
 npx -y github:onehumanbeing/agent-config-bridge
