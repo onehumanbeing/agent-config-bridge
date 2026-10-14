@@ -1,0 +1,12 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.onehumanbeing/agent-config-bridge",
+  "title": "Agent Config Bridge",
+  "description": "Convert CLAUDE.md, AGENTS.md, Cursor rules, GEMINI.md and MCP configs between coding agents.",
+  "websiteUrl": "https://getaicodingagent.com",
+  "repository": { "url": "https://github.com/onehumanbeing/agent-config-bridge", "source": "github" },
+  "version": "0.1.0",
+  "packages": [
+    { "registryType": "npm", "identifier": "agent-config-bridge", "version": "0.1.0", "transport": { "type": "stdio" } }
+  ]
+}

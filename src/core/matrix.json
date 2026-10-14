@@ -1,0 +1,159 @@
+{
+ "verified": "2026-10-14",
+ "tools": {
+  "claude": "Claude Code",
+  "codex": "Codex CLI",
+  "cursor": "Cursor",
+  "gemini": "Gemini CLI"
+ },
+ "rows": [
+  {
+   "what": "Project instructions",
+   "cells": {
+    "claude": {
+     "text": "`CLAUDE.md` or `.claude/CLAUDE.md`; reads `AGENTS.md` only if no CLAUDE.md exists (v2.1.277+)",
+     "doc": "https://code.claude.com/docs/en/memory"
+    },
+    "codex": {
+     "text": "`AGENTS.md` (per directory; `AGENTS.override.md` wins)",
+     "doc": "https://developers.openai.com/codex/guides/agents-md"
+    },
+    "cursor": {
+     "text": "`.cursor/rules/*.mdc` (frontmatter: description, globs, alwaysApply) or `AGENTS.md`",
+     "doc": "https://cursor.com/docs/context/rules"
+    },
+    "gemini": {
+     "text": "`GEMINI.md`; other names via `context.fileName` in settings.json",
+     "doc": "https://geminicli.com/docs/cli/gemini-md/"
+    }
+   }
+  },
+  {
+   "what": "Global instructions",
+   "cells": {
+    "claude": {
+     "text": "`~/.claude/CLAUDE.md`",
+     "doc": "https://code.claude.com/docs/en/memory"
+    },
+    "codex": {
+     "text": "`~/.codex/AGENTS.md` (or `AGENTS.override.md`)",
+     "doc": "https://developers.openai.com/codex/guides/agents-md"
+    },
+    "cursor": {
+     "text": "User Rules in Customize → Rules (in-app, not a file)",
+     "doc": "https://cursor.com/docs/context/rules"
+    },
+    "gemini": {
+     "text": "`~/.gemini/GEMINI.md`",
+     "doc": "https://geminicli.com/docs/cli/gemini-md/"
+    }
+   }
+  },
+  {
+   "what": "Imports",
+   "cells": {
+    "claude": {
+     "text": "`@path/to/file` (max 4 hops)",
+     "doc": "https://code.claude.com/docs/en/memory"
+    },
+    "codex": {
+     "text": "unknown",
+     "doc": null
+    },
+    "cursor": {
+     "text": "`@file` mentions are read on demand, not inlined",
+     "doc": "https://cursor.com/docs/context/rules"
+    },
+    "gemini": {
+     "text": "`@file.md` imports",
+     "doc": "https://geminicli.com/docs/cli/gemini-md/"
+    }
+   }
+  },
+  {
+   "what": "Legacy `.cursorrules`",
+   "cells": {
+    "claude": {
+     "text": "`/init` can migrate it",
+     "doc": "https://code.claude.com/docs/en/memory"
+    },
+    "codex": {
+     "text": "unknown",
+     "doc": null
+    },
+    "cursor": {
+     "text": "Not mentioned in current rules docs; use `.cursor/rules/*.mdc`",
+     "doc": "https://cursor.com/docs/context/rules"
+    },
+    "gemini": {
+     "text": "unknown",
+     "doc": null
+    }
+   }
+  },
+  {
+   "what": "MCP config (project)",
+   "cells": {
+    "claude": {
+     "text": "`.mcp.json` → `mcpServers` (`type`: stdio / http)",
+     "doc": "https://code.claude.com/docs/en/mcp"
+    },
+    "codex": {
+     "text": "`.codex/config.toml` → `[mcp_servers.NAME]` (trusted projects only)",
+     "doc": "https://developers.openai.com/codex/mcp"
+    },
+    "cursor": {
+     "text": "`.cursor/mcp.json` → `mcpServers`",
+     "doc": "https://cursor.com/docs/context/mcp"
+    },
+    "gemini": {
+     "text": "`.gemini/settings.json` → `mcpServers` (`httpUrl` for streamable HTTP, `url` for SSE)",
+     "doc": "https://geminicli.com/docs/tools/mcp-server/"
+    }
+   }
+  },
+  {
+   "what": "MCP config (user)",
+   "cells": {
+    "claude": {
+     "text": "`claude mcp add` (user scope); file location see docs",
+     "doc": "https://code.claude.com/docs/en/mcp"
+    },
+    "codex": {
+     "text": "`~/.codex/config.toml`",
+     "doc": "https://developers.openai.com/codex/mcp"
+    },
+    "cursor": {
+     "text": "`~/.cursor/mcp.json`",
+     "doc": "https://cursor.com/docs/context/mcp"
+    },
+    "gemini": {
+     "text": "`~/.gemini/settings.json`",
+     "doc": "https://geminicli.com/docs/reference/configuration/"
+    }
+   }
+  },
+  {
+   "what": "Skills folder",
+   "cells": {
+    "claude": {
+     "text": "`.claude/skills/` · `~/.claude/skills/`",
+     "doc": "https://code.claude.com/docs/en/skills"
+    },
+    "codex": {
+     "text": "`.agents/skills/` · `~/.agents/skills/`",
+     "doc": "https://developers.openai.com/codex/skills"
+    },
+    "cursor": {
+     "text": "`.cursor/skills/`, `.agents/skills/` · `~/.cursor/skills/`",
+     "doc": "https://cursor.com/docs/skills"
+    },
+    "gemini": {
+     "text": "`.gemini/skills/` or `.agents/skills/` · `~/.gemini/skills/`",
+     "doc": "https://geminicli.com/docs/cli/skills/"
+    }
+   }
+  }
+ ],
+ "source": "https://getaicodingagent.com/#compat"
+}
